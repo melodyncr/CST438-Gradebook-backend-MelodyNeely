@@ -1,5 +1,5 @@
 CREATE TABLE course (
-  year int  NOT NULL,
+  year1 int  NOT NULL,
   semester varchar(10) NOT NULL,
   course_id int  NOT NULL,
   section int  NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE course (
   room varchar(20) DEFAULT NULL,
   instructor varchar(50) DEFAULT NULL,
   start date DEFAULT NULL,
-  end date DEFAULT NULL,
+  end1 date DEFAULT NULL,
   PRIMARY KEY (course_id)
 );
 
@@ -25,7 +25,7 @@ CREATE TABLE student (
 CREATE TABLE enrollment (
   enrollment_id int NOT NULL AUTO_INCREMENT,
   student_id int  NOT NULL,
-  year int NOT NULL,
+  year1 int NOT NULL,
   semester varchar(10) NOT NULL,
   course_id int  NOT NULL,
   course_grade varchar(5) DEFAULT NULL,

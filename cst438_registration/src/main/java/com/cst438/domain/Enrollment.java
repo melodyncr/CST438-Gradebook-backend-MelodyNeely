@@ -22,7 +22,7 @@ public class Enrollment {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "course_id")
 	private Course course;
-	private int year;
+	private int year1;
 	private String semester;
 	private String courseGrade;
 	
@@ -47,10 +47,10 @@ public class Enrollment {
 		this.course = course;
 	}
 	public int getYear() {
-		return year;
+		return year1;
 	}
 	public void setYear(int year) {
-		this.year = year;
+		this.year1 = year;
 	}
 	public String getSemester() {
 		return semester;
@@ -68,7 +68,7 @@ public class Enrollment {
 	@Override
 	public String toString() {
 		return "Enrollment [enrollment_id=" + enrollment_id + ", student=" + student.getEmail() + ", course=" + course.getCourse_id() + ", year="
-				+ year + ", semester=" + semester + ", courseGrade=" + courseGrade + "]";
+				+ year1 + ", semester=" + semester + ", courseGrade=" + courseGrade + "]";
 	}
 	
 }

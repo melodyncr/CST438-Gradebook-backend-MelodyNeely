@@ -1,12 +1,10 @@
 package com.cst438;
 
-import static org.junit.Assert.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -58,12 +56,11 @@ public class EndToEndScheduleTest {
 	public static final int SLEEP_DURATION = 1000; // 1 second.
 
 
-	/*
-	 * add course TEST_COURSE_ID to schedule for 2021 Fall semester.
-	 */
-	
-	@Test
-	public void addCourseTest() throws Exception {
+    /*
+     * add course TEST_COURSE_ID to schedule for 2021 Fall semester.
+     */
+    @Test
+    void addCourseTest() throws Exception {
 
 	
 		// set the driver location and start driver
@@ -119,7 +116,7 @@ public class EndToEndScheduleTest {
 			dropButton.click();
 			
 			// the drop course action causes an alert to occur.  
-			WebDriverWait wait = new WebDriverWait(driver, 1);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
             wait.until(ExpectedConditions.alertIsPresent());
             
             Alert simpleAlert = driver.switchTo().alert();

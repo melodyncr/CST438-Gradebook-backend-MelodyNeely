@@ -10,7 +10,7 @@ public class Course {
 	
 	@Id
 	private int course_id;
-	private int year;
+	private int year1;
 	private String semester;
 	private int section;
 	private String title;
@@ -19,7 +19,7 @@ public class Course {
 	private String room;
 	private String instructor;
 	private Date start;
-	private Date end;
+	private Date end1;
 	
 	public Course() {
 		super();
@@ -34,11 +34,11 @@ public class Course {
 	}
 
 	public int getYear() {
-		return year;
+		return year1;
 	}
 
 	public void setYear(int year) {
-		this.year = year;
+		this.year1 = year;
 	}
 
 	public String getSemester() {
@@ -106,18 +106,18 @@ public class Course {
 	}
 
 	public Date getEnd() {
-		return end;
+		return end1;
 	}
 
 	public void setEnd(Date end) {
-		this.end = end;
+		this.end1 = end;
 	}
 
 	@Override
 	public String toString() {
-		return "Course [course_id=" + course_id + ", year=" + year + ", semester=" + semester + ", section=" + section
+		return "Course [course_id=" + course_id + ", year=" + year1 + ", semester=" + semester + ", section=" + section
 				+ ", title=" + title + ", times=" + times + ", building=" + building + ", room=" + room
-				+ ", instructor=" + instructor + ", start=" + start + ", end=" + end + "]";
+				+ ", instructor=" + instructor + ", start=" + start + ", end=" + end1 + "]";
 	}
 
 }
