@@ -1,4 +1,4 @@
-INSERT INTO student VALUES 
+INSERT INTO student (student_id, name, email, status, status_code) VALUES
 (1,'test','test@csumb.edu',NULL,0),
 (2,'david','dwisneski@csumb.edu',NULL,0),
 (3,'tom', 'trebold@csumb.edu', NULL, 0);
@@ -14,8 +14,8 @@ INSERT INTO course VALUES
 (2021,'Fall',40442,1,'CST 363 - Introduction to Database Systems','MoWe 4:00PM - 5:50PM','506','104','dwisneski@csumb.edu', '2021-08-24', '201-12-13')
 ;
 
-insert into enrollment values 
-(1, 1, 2020, 'Fall', 30157, null), 
+insert into enrollment values
+(1, 1, 2020, 'Fall', 30157, null),
 (2, 1, 2020, 'Fall', 30163, null),
 (3, 1, 2020, 'Fall', 31045, null),
 (4, 2, 2020, 'Fall', 31045, null),
